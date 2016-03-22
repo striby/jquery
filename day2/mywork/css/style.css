@@ -6,6 +6,9 @@
 body{
     font-family:"Arial",sans-serif;
 }
+ul{
+    list-style: none;
+}
 .left{
     float: left;
 }
@@ -79,8 +82,8 @@ header .logo{
 }
 .container{
     width: 100%;
-    height: 968px;
     text-align: center;
+    position: relative;
 }
 .container-gallery{
     width: inherit;
@@ -150,4 +153,136 @@ header .logo{
 .services-section{
     height: 690px;
     width: inherit;
+}
+
+.services-section>h1{
+    color: #630;
+    font-size: 38px;
+    margin-top: 60px;
+}
+.services-section .articles-list{
+    width: 1087px;
+    height: 475px;
+    margin: 50px auto;
+    outline: 1px solid red;
+}
+.services-section>.articles-list>.article{
+    width: 250px;
+    height: 474px;
+    float: left;
+    text-align: left;
+    outline: 1px solid black;
+    margin-left: 29px;
+}
+.services-section>.articles-list>.article:first-child{
+    margin-left: 0;
+
+}
+.services-section .title{
+    height: 70px;
+    width: inherit;
+}
+.services-section .title .articles-title-num{
+    font-size: 30px;
+    font-weight: 800;
+}
+.services-section .title .articles-title{
+    font-size: 24px;
+    font-weight: 200;
+}
+.c630{
+    color: #630;
+}
+.c444{
+    color: #444444;
+}
+.c1b{
+    color: #1b1b1b;
+}
+.c81{
+    color: #818181;
+}
+.article-img{
+    height: 250px;
+    width: 250px;
+}
+.bw1{
+    background: url("../images/b-w1.jpg") 70% no-repeat;
+    background-size: cover;
+
+}
+.bw2{
+    background: url("../images/b-w2.jpg") 70% no-repeat;
+    background-size: cover;
+
+}
+.bw3{
+    background: url("../images/b-w3.jpg") 70% no-repeat;
+    background-size: cover;
+
+}
+.bw4{
+    background: url("../images/b-w4.jpg") 70% no-repeat;
+    background-size: cover;
+
+}
+.articles-words{
+    line-height: 25px;
+    margin-top: 15px;
+}
+.articles-words-plane{
+    width: 63px;
+    height: 3px;
+    background-color: #663300;
+    margin-top: 10px;
+}
+.articles-words-readMore{
+    font-size: 16px;
+    font-weight: bold;
+}
+/*footer*/
+.myfooter{
+    width: 100%;
+    height: 355px;
+    background-color: #444444;
+}
+.footer-information a{
+    color: #818181;
+}
+.footer-information h4{
+    color: white;
+}
+.footer-information ul{
+    margin-top: 20px;
+
+}
+.footer-information ul li{
+    padding-top: 5px;
+}
+.footer-information-position{
+    margin-left: 120px;
+    padding-top: 55px;
+
+}
+.footer-categories-position{
+    padding-top: 55px;
+    margin-left: 145px;
+}
+.footer-account-position{
+    padding-top: 55px;
+    margin-left: 120px;
+}
+.footer-letter-position{
+    padding-top: 55px;
+    margin-left: 150px;
+}
+.footer-list{
+    outline: 1px solid red;
+    height: 210px;
+}
+.copy{
+    height: 100px;
+    width: inherit;
+    text-align: center;
+    padding-top: 70px;
 }
