@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+</head>
+<style type="text/css">
+    #main{
+        border: 1px solid red;
+        height: 50px;
+    }
+</style>
+<body>
+<span>div外部的span测试</span>
+<div id="main">
+    <div>
+        <span>div内部的span测试</span>
+    </div>
+</div>
+
+<p>把我移到main里面</p>
+
+<h1>内部插入节点</h1>
+<button onclick="myAppend()">插入节点到后面</button>
+<button onclick="myAppendTo()">移动节点到后面</button>
+<button onclick="myPrepend()">插入节点到前面</button>
+<button onclick="myPrependTo()">移动节点到前面</button>
+
+<h1>外部插入节点</h1>
+<button onclick="myAfter()">节点后插入</button>
+<button onclick="myBefore()">节点前插入</button>
+<button onclick="myInsertAfter()">移动节点到后面</button>
+<button onclick="myInsertBefore()">移动节点到前面</button>
+
+<h1>包裹节点</h1>
+<button onclick="myWrap()">包裹节点</button>
+<button onclick="myUnWrap()">移除包裹节点</button>
+
+<h1>复制,删除,替换</h1>
+<button onclick="myClone()">克隆节点</button>
+<button onclick="myRemove()">删除节点</button>
+<button onclick="myReplace()">替换节点</button>
+<script src="../jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    function myAppend(){
+        var newBox=$("<div>新添加的节点</div>");
+        $("#main").append(newBox).css("color","red");
+    }
+    function myAppendTo(){
+        $("p").appendTo($("#main"));
+    }
+    function myPrepend(){
+        $("#main").prepend("<span>我是span</span>");
+    }
+    function myPrependTo(){
+        $("<span>我是span2</span>").prependTo("#main")
+    }
+    /*外部插入节点*/
+    function myAfter(){
+        $("#main").after($("span"));
+    }
+    function myBefore(){
+        $("#main").before($("span"));
+    }
+    function myInsertAfter(){
+        $("span").insertAfter($("#main"));
+        $("span").insertBefore($("#main"));
+    }
+    /*包裹节点*/
+    function myWrap(){
+//        $("span").wrap("<div></div>");
+        $("span").wrapAll("<div></div>");//所有span包裹在同一个div内
+    }
+    function myUnWrap(){
+        $("span").unwrap().unwrap();
+    }
+    /*复制 删除 替换*/
+    function myClone(){
+        $("p").clone().appendTo("#main");
+    }
+    function myRemove(){
+        $("span").remove();
+    }
+    function myReplace(){
+        $("span").replaceWith("<div>被替换的内容</div>")
+    }
+</script>
+</body>
+
+</html>

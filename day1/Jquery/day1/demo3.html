@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+</head>
+<style type="text/css">
+    .myclass{
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<body>
+<div id="myCBs">
+    <input type="checkbox" value="1" id="myinput1"/>
+    <input type="checkbox" value="2"/>
+    <input type="checkbox" value="3"/>
+    <input type="checkbox" value="4"/>
+    <input type="checkbox" value="5"/>
+    <button onclick="getChecked()">获取勾选的checkbox</button>
+    <button onclick="getAttr()">获取元素属性值</button>
+    <button onclick="setAttr()">设置元素属性值</button>
+    <button onclick="removeAttr()">移除元素属性值</button>
+</div>
+<script src="../jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    function getChecked(){
+//        console.log($("input[type='checkbox']:checked"));
+//        console.log($("input[type='checkbox']:checked").val());
+        var CbVal=$("input[type='checkbox']:checked");
+//        console.log(CbVal.val());
+        for(var i=0;i<CbVal.length;i++){
+//            console.log(CbVal[i].val());
+//            console.log(CbVal[i].value);
+            console.log($(CbVal[i]).val());
+        }
+    }
+    //获取属性值
+    function getAttr(){
+        /*attr("属性名")*/
+        console.log($("#myinput1").attr("value"));
+    }
+    //设置属性值
+    function setAttr(){
+        /*attr("属性名","值")*/
+//        console.log($("#myinput1").attr("class","dengqirui"));
+        $("#myinput1").attr({"class":"myclass","id":"myid","value":"0"})
+    }
+    //移除属性
+    function removeAttr(){
+        $("#myid").removeAttr("class");
+    }
+</script>
+</body>
+
+</html>

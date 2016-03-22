@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+</head>
+<style type="text/css">
+    #box{
+        color:red;
+        /*color:rgb(255, 215, 0)*/
+    }
+    .box{
+        font-size: 30px;
+    }
+    .border{
+        border: 3px dashed white;
+    }
+
+    .black{
+        outline: 5px solid black;
+    }
+    .pink{
+        outline: 5px solid pink;
+    }
+</style>
+<body>
+<div id="box">
+    测试
+</div>
+<button onclick="myToggle()">字色切换</button>
+<script src="../jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    $(function(){
+        console.log($("#box").css("color"));//rgb
+        console.log($("#box").css(["color","height","width"]));
+        $("#box").css({"height":"100px","width":"500px","border-radius":"5px","background":"yellow"});
+        //增加类
+        $("#box").addClass("box border");
+        //移除类
+        $("#box").removeClass("box");
+    });
+    function myToggle(){
+//        $("#box").toggleClass("black");
+//        $("#box").toggleClass("black pink");//无效
+        /*toggleClass(function(){return:最终要切换的值})*/
+//        $("#box").toggleClass(function(){
+//            return $("#box").hasClass("black")?"pink":"black";
+//        });
+        $("#box").toggleClass(function(){
+            if($("#box").hasClass("black")){
+                $("#box").removeClass("black");
+                return "pink";
+            }else{
+                $("#box").removeClass("pink");
+                return "black";
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

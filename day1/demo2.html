@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<dic id="box">参数</dic>
+<script>
+    $(function () {
+        console.log($("#box").css("id"));
+        console.log($("#box").css(["class","id","width"]));
+
+
+//        增加属性
+        $("#box").addClass("className1 className2");
+//        删除属性
+        $("#box").removeClass("className1");
+//        切换属性
+
+//        参数class 描述:
+//                为匹配的元素切换 'selected' 类
+//        jQuery 代码:
+                $("p").toggleClass("selected");
+// 参数class,switch 描述:
+// 每点击三下加上一次 'highlight' 类
+        var count = 0;
+        $("p").click(function(){
+            $(this).toggleClass("highlight", count++ % 3 == 0);
+        });
+
+    });
+</script>
+</body>
+</html>

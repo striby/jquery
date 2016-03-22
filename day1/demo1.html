@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box">QAWDIUH</div>
+<input type="text" value="texta123"/>
+<input type="text" value="texta12113"/>
+
+<input type="checkbox" class="ck" id="ck1"/>
+<input type="checkbox" class="ck" id="ck2"/>
+<input type="checkbox" class="ck" id="ck3"/>
+<input type="checkbox" class="ck" id="ck4"/>
+<input type="checkbox" class="ck" id="ck5"/>
+<input type="button" value="获取属性"/>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    console.log(jQuery === $);  // true
+    $(function(){
+        $("#box").css("color","red")
+                .css("font-size","20px")
+                .click(function () {
+                    alert("click")
+                });  //返回的是一个对象，因此可以继续进行操作。 称为jQuery 的链式操作
+    });
+//页面加载完毕  按顺序加载jq，而原生window 被覆盖
+//因为jq只需要等待dom加载完毕就行。不要等待window的加载
+//    window 只能执行一次，而$(document).ready() 可以无限执行
+/*
+    window.onload==function () {
+        alert("页面加载完毕3");
+    };
+
+    $(window).load(function () {
+        alert(" $的window,不会覆盖，可以重复加载。。执行顺序在jq 加载完毕后加载。");
+    })
+
+    $(function () {
+        alert("页面加载完毕1");
+
+    });
+    
+    $(document).ready(function () {
+        alert(" $(function (){} 的完整式");
+
+    });
+
+    $(function () {
+        alert("避免和其他库冲突的写法")
+    })(jQuery);
+    */
+    
+ /* //返回的对象dom节点的值
+    $(function () {
+        console.log($("input[type=text]").val() );
+    })*/
+$("#box").attr({"id":"mybox","name":"myname","class":"cls"});
+
+    $("#box").removeAttr("class");
+</script>
+</body>
+</html>

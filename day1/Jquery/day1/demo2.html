@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+</head>
+<style type="text/css"></style>
+<body>
+<div id="box">
+    <p>测试</p>
+</div>
+<div id="txt">
+    <input type="text"/>
+    <button onclick="getValue()">点击获取值</button>
+    <button onclick="setValue()">点击设置值</button>
+</div>
+<script src="../jquery-1.11.3.js"></script>
+<script type="text/javascript">
+//    $(function(){
+//        var box=document.getElementById("box");
+//        console.log(box);
+////        console.log($("#box"));
+//        /*Jq对象===>JS原生DOM对象*/
+//        console.log($("#box").get(0));
+//
+//        /*JS原生DOM对象====>jq对象*/
+//        console.log($(box));
+//    });
+
+    /*选择器*/
+    function getValue(){
+        console.log($("input[type='text']").val());
+        console.log($("input[type='text']").get(0).value);
+
+    }
+    function setValue(){
+        $("input[type='text']").val("hello~付小磊!");
+
+    }
+    $("#box").click(function(){
+        console.log($("#box").html());
+//        $("#box").html("付小磊,JS白学了!");
+//        $("#box").html("<p>付小磊,JS白学了!</p>");
+        $("#box").html($("#box").html()+"<p>付小磊,JS白学了!</p>");
+    })
+</script>
+</body>
+
+</html>

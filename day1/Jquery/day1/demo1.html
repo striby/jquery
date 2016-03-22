@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+</head>
+<style type="text/css"></style>
+<body>
+<div id="box">测试
+    <div id="box1">BOX1测试</div>
+</div>
+<div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+<!--JQ引入-->
+<script src="../jquery-1.11.3.js"></script>
+<script type="text/javascript">
+//    var mybox=document.getElementById("box");
+//    var myBox=jQuery("#box");
+//    console.log("JS"+mybox);
+//    console.log("JQ"+myBox);
+//    var myBoxtext=$("#box");
+//    console.log("JQ1"+myBoxtext);
+//    alert(jQuery===$);//true
+
+//    $(function(){
+////        alert("1");
+//        $("#box").css("color","red");
+////        console.log($);
+////        console.log($());
+//        console.log( $("#box").css("color","red"));//jquery总是返回给我们一个对象
+//        $("#box").css("color","red")//链式调用
+//                .css("font-size","50px")
+//                .click(function(){
+//            alert("Box被点击")
+//        });
+//    });
+//    $(document).ready(function(){
+//        alert(2)
+//    });
+//    window.onload=function(){
+//        alert("页面加载完毕1");
+//    };
+//    window.onload=function(){
+//        alert("页面加载完毕2");
+//    };
+//    $(document).ready(function(){
+//        alert(3)
+//    });
+//    $(window).load(function(){
+//        alert(1)
+//    });
+//    $(window).load(function(){
+//        alert(2)
+//    });
+
+//    $(function(){
+//        alert(3)
+//    })(jQuery);
+
+//    var $$=jQuery;
+//    $$("#box1").css("background","yellow");
+
+    /*==============选择器===========*/
+    $(function(){
+       var myli=$("div>ul>li");//返回一个对象
+        console.log(myli);
+        console.log(myli.length);//4
+        console.log(document.getElementById("box").length);//undefined
+
+    });
+
+</script>
+</body>
+</html>
