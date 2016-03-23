@@ -27,7 +27,22 @@
 
 </header>
 <section class="banner">
-
+    <ul class="rslides callbacks callbacks1" id="slider3">
+        <li id="callbacks1_s0">
+            <div class="banner-slide">
+            </div>
+        </li>
+        <li id="callbacks1_s1">
+            <div class="banner1">
+            </div>
+        </li>
+        <li id="callbacks1_s2" >
+            <div class="banner2">
+            </div>
+        </li>
+    </ul>
+    <div class="callbacks_nav callbacks1_nav prev"></div>
+    <div class="callbacks_nav callbacks1_nav next"></div>
 </section>
 <article class="container">
     <section class="container-gallery">
@@ -57,12 +72,29 @@
         <h1>Latest Designs</h1>
 
         <div class="img-wrapper">
-            <img src="./images/11.jpg" alt="图片列表" class="img-list left"/>
-            <img src="./images/15.jpg" alt="图片列表" class="img-list left"/>
-            <img src="./images/13.jpg" alt="图片列表" class="img-list left"/>
-            <img src="./images/14.jpg" alt="图片列表" class="img-list left"/>
-            <img src="./images/12.jpg" alt="图片列表" class="img-list left"/>
-            <img src="./images/17.jpg" alt="图片列表" class="img-list left"/>
+            <div class="img-list left">
+                <img src="./images/11.jpg" alt="图片列表" class="img-position"/>
+                <!--<div class='img-list-words'>-->
+                    <!--<h2 class='img-list-words-h2'>Laset Fvrnshed</h2>-->
+                    <!--<p class='img-list-words-p'>Lorem ipsum dolor sit amet,consectetur<br>adipiscing elit,sed do eiusmood tempor<br>incididunt ut labore et dolore magna aliqua.<br>ut enim ad minim veniam,quis nost.</p>-->
+                <!--</div>-->
+            </div>
+            <div class="img-list left">
+                <img src="./images/15.jpg" alt="图片列表" class="img-position"/>
+            </div>
+            <div class="img-list left">
+                <img src="./images/13.jpg" alt="图片列表" class="img-position"/>
+            </div>
+            <div class="img-list left">
+                <img src="./images/14.jpg" alt="图片列表" class="img-position"/>
+            </div>
+            <div class="img-list left">
+                <img src="./images/12.jpg" alt="图片列表" class="img-position"/>
+            </div>
+            <div class="img-list left">
+                <img src="./images/17.jpg" alt="图片列表" class="img-position"/>
+            </div>
+
         </div>
     </section>
     <section class="img-banner-wrapper">
@@ -77,7 +109,11 @@
                     <span class="articles-title-num">01./</span>
                     <span class="articles-title">Normal</span>
                 </div>
-                <div class="article-img bw1"></div>
+                <div class="article-img bw1">
+                    <div class="mengban">
+
+                    </div>
+                </div>
                 <!--<img src="./images/b-w1.jpg" alt="加载失败" class="article-img"/>-->
                 <div class="articles-words">
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -181,13 +217,22 @@
         <div class="footer-information left footer-letter-position">
             <h4>NEWLETTER</h4>
             <ul>
-                <li><a href="javascript:void(0)">My account</a></li>
+                <li>
+                    <div class="footer-letter-position-input-div">
+                        <input id="email" type="text" value="Enter Your Email" class="c81" />
+                        <a href="#"><i class="iconfont">&#xe6e4;</i></a>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
-    <div class="copy c81">
-        Copyright@2015.Company name All rights reserved.
+    <div class="top">
+        <!--<img src="./images/to-top1.png" alt=""/>-->
     </div>
+    <div class="copy c81">
+        Copyright&copy;2015.Company name All rights reserved.
+    </div>
+
 </div>
 
 <script src="js/jquery-1.11.3.js"></script>
