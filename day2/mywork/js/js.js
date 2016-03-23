@@ -88,4 +88,12 @@ function settimeout(){
     },1000);
 }
 
+//放大镜
+$(".mengban").click(function () {
+    $(".zhezhao").css("display","block");
+
+    $(".close-div").click(function () {
+        $(".zhezhao").css("display","none");
+    });
+});
 
