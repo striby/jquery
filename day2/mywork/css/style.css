@@ -5,6 +5,8 @@
 
 body{
     font-family:"Arial",sans-serif;
+    background: url("../images/bg.png");
+
 }
 ul{
     list-style: none;
@@ -374,22 +376,22 @@ header .logo{
     left: 0;
 }
 .bw1{
-    background: url("../images/b-w1.jpg") 70% no-repeat;
+    background: url("../images/w1.jpg") 70% no-repeat;
     background-size: cover;
 
 }
 .bw2{
-    background: url("../images/b-w2.jpg") 70% no-repeat;
+    background: url("../images/w2.jpg") 70% no-repeat;
     background-size: cover;
 
 }
 .bw3{
-    background: url("../images/b-w3.jpg") 70% no-repeat;
+    background: url("../images/w3.jpg") 70% no-repeat;
     background-size: cover;
 
 }
 .bw4{
-    background: url("../images/b-w4.jpg") 70% no-repeat;
+    background: url("../images/w4.jpg") 70% no-repeat;
     background-size: cover;
 
 }
@@ -490,44 +492,103 @@ header .logo{
     height: 100%;
     position: fixed;
     z-index: 7;
-    background-color: rgba(20,20,20,.9);
+    background-color: rgba(13,13,13,1);
     display: none;
+    overflow: hidden;
+}
+.zhezhao i{
+    color: white;
+    font-size: 34px;
 }
 
 .close-div{
     width: 20px;
     height: 20px;
     position: absolute;
-    right: 20px;
-    top: 20px;
-    -webkit-transition: 0.3s linear all;
+    left: 20px;
+    bottom: 30px;
     cursor: pointer
 
 }
-.close-div:hover{
-    -webkit-transform:rotate(360deg);
-    -webkit-transform-origin:50%;
+.bottom-bg-div{
+    width: inherit;
+    height:70px;
+    background-color: rgba(4,4,4,1);
+    border-top: 1px solid rgba(1,1,1,1);
+    position: absolute;
+    bottom: 0;
 }
 .zhezhao>.img-container{
     width: 1000px;
     height: 500px;
     background-color: #fffdef;
-    margin: 30px auto;
+    margin: 70px auto;
+    position: relative;
+    /*overflow: hidden;*/
+}
+.zhezhao-imgs-wrapper{
+    width: 5396px;
+    height: inherit;
+    overflow: inherit;
+    position: relative;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.zhezhao-img-container{
+   width: 1349px;
+    height: inherit;
+
+    /*left: -1400px;*/
+    float: left;
+}
+#img-container1 {
+/*margin-left: -1349px;*/
+}
+#img-container1 .zhezhao-img{
+    width: 1000px;
+    height: 500px;
+    background: url("../images/b-w1.jpg") center no-repeat;
+    margin: 70px auto;
     position: relative;
 }
-.zhezhao> .lbtn  {
+#img-container2 .zhezhao-img{
+    width: 1000px;
+    height: 500px;
+    background: url("../images/b-w2.jpg") center no-repeat;
+    margin: 70px auto;
+    position: relative;
+}
+#img-container3 .zhezhao-img{
+    width: 1000px;
+    height: 500px;
+    background: url("../images/b-w3.jpg") center no-repeat;
+    margin: 70px auto;
+    position: relative;
+}
+#img-container4 .zhezhao-img{
+    width: 1000px;
+    height: 500px;
+    background: url("../images/b-w4.jpg") center no-repeat;
+    margin: 70px auto;
+    position: relative;
+}
+.zhezhao .lbtn  {
     position: absolute;
-    top: 50%;
-    left: 20px;
+    bottom: 30px;
+    right: 120px;
     width: 20px;
     height: 20px;
     cursor: pointer
 }
-.zhezhao> .rbtn{
+.zhezhao .rbtn{
     width: 20px;
     height: 20px;
     position: absolute;
-    right: 20px;
-    top: 50%;
+    bottom:30px;
+    right: 60px;
     cursor: pointer;
 }
+

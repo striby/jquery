@@ -90,10 +90,111 @@ function settimeout(){
 
 //放大镜
 $(".mengban").click(function () {
+    var imgId = $(this).attr("id");
+    var imgNum = imgId.substring(3,4);
+    var left = (imgNum-1)*(-1349);
+    console.log(imgNum);
     $(".zhezhao").css("display","block");
 
     $(".close-div").click(function () {
         $(".zhezhao").css("display","none");
     });
+    $(".zhezhao-imgs-wrapper").css("margin-left",left+"px");
+
+    $(".lbtn").click(function () {
+        if(imgNum>1){
+            imgNum--;
+            left = (imgNum-1)*(-1349);
+           $(".zhezhao-imgs-wrapper").css("margin-left",left);
+        }else{
+            //    到达第一张
+            $("#img-container1 .zhezhao-img").animate({
+                left:'30px'
+            });
+            $("#img-container1 .zhezhao-img").animate({
+                left:'-30px'
+            });
+            $("#img-container1 .zhezhao-img").animate({
+                left:'0px'
+            });
+        }
+    });
+
+    $(".rbtn").click(function(){
+        if(imgNum<4){
+            imgNum++;
+            left = (imgNum-1)*(-1349);
+            $(".zhezhao-imgs-wrapper").css("margin-left",left);
+        }else{
+            //    到达第一张
+            $("#img-container4 .zhezhao-img").animate({
+                left:'30px'
+            });
+            $("#img-container4 .zhezhao-img").animate({
+                left:'-30px'
+            });
+            $("#img-container4 .zhezhao-img").animate({
+                left:'0px'
+            });
+        }
+    });
 });
+/*
+$(".mengban").click(function () {
+    var imgId = $(this).attr("id");
+    var src = "./images/"+$(this).attr("id")+".jpg";
+    var imgNum = imgId.substring(3,4);
+    console.log(imgNum);
+    $(".zhezhao").css("display","block");
+
+    $(".close-div").click(function () {
+        $(".zhezhao").css("display","none");
+    });
+
+    console.log(src);
+    $(".img-container").css({"background":"url("+src+") center no-repeat","background-size":"contain"});
+
+    $(".lbtn").click(function () {
+        if(imgNum>1){
+            imgNum--;
+            src = "./images/b-w"+imgNum+".jpg";
+
+            showImg(src);
+            //$(".img-container").fadeIn("1000", function () {
+            //    $(".img-container").css({"background":"url("+src+") center no-repeat","background-size":"contain"});
+            //})
+        }else{
+            //    到达第一张
+            $(".img-container").animate({
+                left:'30px'
+            });
+            $(".img-container").animate({
+                left:'-30px'
+            });
+            $(".img-container").animate({
+                left:'0px'
+            });
+        }
+    });
+
+    $(".rbtn").click(function(){
+        if(imgNum<4){
+            imgNum++;
+            src = "./images/b-w"+imgNum+".jpg";
+            showImg(src);
+        }else{
+            //    到达第一张
+            $(".img-container").animate({
+                right:'30px'
+            });
+            $(".img-container").animate({
+                right:'-30px'
+            });
+            $(".img-container").animate({
+                right:'0px'
+            });
+        }
+    });
+
+});*/
 
