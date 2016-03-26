@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="jquery-1.11.3.js"></script>
+<script>
+    /*$.extend()--全局方法
+    * 1。可以在对象上扩充对象
+    * $.extend(需要扩充的对象，作为扩充使用的模板)
+    * 作为扩充使用的模板可以有多个，扩充后成为自己的属性(hasOwnProperty() true)
+    *
+    * */
+
+    $(function () {
+       var obj1 = {name:"xx",sex:"man",tel:"123"};
+       var obj2 = {name:"xx",sex:"man",title:"asdqwe"};
+       var obj3 = {name:"xx",sex:"man",title:"asdqwe",gdh:"qweqwe"};
+
+        $.extend(obj1,obj2);
+//        原有属性会被覆盖，会继承新的属性
+        console.log(obj1.name);
+        console.log(obj1.title);
+        $.extend(obj1,obj2,obj3)
+
+    });
+
+    /*
+    * $.fn.extend() 对jq属性和方法进行扩展
+    * $.fn.extend()==jQuery.prototype
+    * $.fn 是jq的入口函数。
+    * */
+    $.fn.extend("mystu","lio");
+    $.fn.extend({
+        eat: function () {
+            console.log("jq方法扩展");
+        },
+        walk: function () {
+            console.log("jq方法扩展-walk");
+        }
+    })
+
+
+</script>
+</body>
+
+</html>
